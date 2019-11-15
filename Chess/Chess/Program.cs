@@ -11,19 +11,18 @@ namespace Chess
             {
                 try
                 {
-                    //Create the first cell
+                    Console.Write("Write first cell:");
                     string str1 = Console.ReadLine();
                     CheckString(str1);
                     Cell cell1 = new Cell(str1);
-                    Console.WriteLine(CheckColour(cell1));
+                    Console.WriteLine(cell1.CheckColour());
 
-                    //Create the second cell
+                    Console.Write("Write second cell:");
                     string str2 = Console.ReadLine();
                     CheckString(str2);
                     Cell cell2 = new Cell(str2);
-                    Console.WriteLine(CheckColour(cell2));
+                    Console.WriteLine(cell2.CheckColour());
 
-                    //Cell comparison
                     Console.WriteLine(ComparisonLocation(cell1, cell2));
                     break;
                 }
@@ -43,16 +42,10 @@ namespace Chess
             str.ToLower();
             if (str.Length == 2)
             {
-                for (int i = 0; i < str.Length; i++)
-                {
-                    if (symbols.Contains(str[0]) && numbers.Contains(str[1]))
+                    if (symbols.Contains(str[0]) == false && numbers.Contains(str[1]) == false)
                     {
+                    throw new NotStringException("Invalid characters. Try again");
                     }
-                    else
-                    {
-                        throw new NotStringException("Invalid characters. Try again");
-                    }
-                }
             }
             else
             {
@@ -61,17 +54,6 @@ namespace Chess
 
         }
 
-        //Check cell for color
-        public static string CheckColour(Cell cell)
-        {
-            if ((cell.File + cell.Rank) % 2 == 0)
-            {
-                return "Black";
-            }
-            else return "White";
-        }
-
-        //Finding and comparing cells vertically, horizontally, diagonally
         public static string ComparisonLocation(Cell cell1, Cell cell2)
         {
             if(cell1.Equals(cell2))
