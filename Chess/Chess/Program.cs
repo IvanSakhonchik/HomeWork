@@ -42,7 +42,7 @@ namespace Chess
             str.ToLower();
             if (str.Length == 2)
             {
-                    if (symbols.Contains(str[0]) == false && numbers.Contains(str[1]) == false)
+                if (symbols.Contains(str[0]) == false || numbers.Contains(str[1]) == false)
                     {
                     throw new NotStringException("Invalid characters. Try again");
                     }
