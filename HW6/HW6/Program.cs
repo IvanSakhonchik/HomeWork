@@ -52,6 +52,7 @@ namespace HW6
                         invoker.SetCommand(new AveragePriceTypeCommand(averagePriceTypeReceiver, cars, car.Type));
                         invoker.Run();
                     }
+                    break;
                 }
             }
         }

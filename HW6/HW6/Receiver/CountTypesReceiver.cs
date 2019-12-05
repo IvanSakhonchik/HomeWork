@@ -1,23 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+
 namespace HW6
 {
     class CountTypesReceiver
     {
         public void CalculateCountTypes(List<ProductCar> cars)
         {
-            int helper = 0;
-            for(int i = 0 ; i < cars.Count-1; i++)
-                for (int j = i+1; j < cars.Count; j++)
+            var sortCars = cars.OrderBy(c => c.Type).ToList();
+            int countTypes = 1;
+            for(int i = 0 ; i < sortCars.Count-1; i++)
+            {
+                if (sortCars[i].Type != sortCars[i+1].Type)
                 {
-                    if(cars[i].Equals(cars[j]))
-                    {
-                        helper++;
-                    }
-
+                    countTypes++;
                 }
+            }
 
-            Program.Output(cars.Count - helper);
+            Program.Output(countTypes);
         }
     }
 }
