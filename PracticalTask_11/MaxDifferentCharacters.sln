@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaxUnequalCharacters", "MaxDifferentCharacters\MaxUnequalCharacters.csproj", "{FFC61B6A-D1E0-43C6-B5CE-33CE33BFC90D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFC61B6A-D1E0-43C6-B5CE-33CE33BFC90D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC61B6A-D1E0-43C6-B5CE-33CE33BFC90D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC61B6A-D1E0-43C6-B5CE-33CE33BFC90D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC61B6A-D1E0-43C6-B5CE-33CE33BFC90D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98473E39-8E23-4CD1-8221-418371008D03}
+	EndGlobalSection
+EndGlobal
